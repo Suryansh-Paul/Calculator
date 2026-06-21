@@ -16,7 +16,10 @@ buttons.forEach(button=> {
         deletelastchar();
 
     }
-  
+    else if(input==="="){
+        calculate();
+         
+    }
     else {
         appendtodisplay(input);
     }
@@ -37,4 +40,12 @@ buttons.forEach(button=> {
     display.value=display.value.slice(0,-1);
   }
 
-  
+  function calculate(){
+    
+    try {
+        display.value = eval(display.value);
+    } catch (error) {
+        display.value= "ERROR";
+    }
+    
+  }

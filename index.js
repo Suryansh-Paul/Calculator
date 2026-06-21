@@ -1,6 +1,6 @@
 const display = document.getElementById("display");
 const buttons= document.querySelectorAll(".btn")
-let justcalculated= false;
+
 
 buttons.forEach(button=> {
     button.addEventListener("click", ()=>{
@@ -25,4 +25,16 @@ buttons.forEach(button=> {
 })
 
 
- 
+  function appendtodisplay(input){
+    display.value+=input;
+  }
+
+  function cleardisplay(){
+    display.value="";
+  }
+
+  function deletelastchar(){
+    display.value=display.value.slice(0,-1);
+  }
+
+  
